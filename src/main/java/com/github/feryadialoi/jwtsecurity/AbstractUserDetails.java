@@ -1,12 +1,14 @@
 package com.github.feryadialoi.jwtsecurity;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-@Data
+@Getter
+@Setter
 public class AbstractUserDetails implements UserDetails {
     protected Collection<? extends GrantedAuthority> authorities;
     protected String password;
